@@ -71,7 +71,7 @@ function respond() {
   else if(request.text && botRegexDL.test(request.text)) {
     this.res.writeHead(200);
     //postMessage("http://www.daddyleagues.com/maddenrating?name=&position=all&team="+request.text.substring(5,8));
-    postMessage("http://daddyleagues.com/wz/team/"+request.text.substring(5,8)+"/depthchart");
+    postMessage("http://daddyleagues.com/xfl2018/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
   
@@ -92,7 +92,7 @@ function respond() {
   }
   else if(request.text && botRegexRules.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/wz/rules");
+    postMessage("http://daddyleagues.com/xfl2018/rules");
     this.res.end();
   } 
   else if(request.text && botRegexGTA.test(request.text)) {
@@ -103,14 +103,14 @@ function respond() {
   else if(request.text && botRegexSC.test(request.text)) {
     this.res.writeHead(200);
     
-    postMessage("http://daddyleagues.com/wz/team/"+request.text.substring(5,8)+"/schedule");
+    postMessage("http://daddyleagues.com/xfl2018/team/"+request.text.substring(5,8)+"/schedule");
     this.res.end();
   }
   else if(request.text && botRegexP.test(request.text)) {
     this.res.writeHead(200);
     var req = request.text.substring(5,request.text.length);
     var rep = req.replace(/ /,"+");
-    postMessage("http://daddyleagues.com/wz/players?name="+rep+"&position=all&team=all");
+    postMessage("http://daddyleagues.com/xfl2018/players?name="+rep+"&position=all&team=all");
     
     this.res.end();
   }  
